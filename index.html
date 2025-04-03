@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultorio Dental</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+header {
+    background-color: #0B3C47 ;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Espacia el logo del contenido */
+    align-items: center;
+}
+
+.header-content {
+    text-align: left; /* Alinea el contenido a la izquierda */
+}
+
+.logo {
+    max-width: 150px;
+    margin-left: auto; /* Coloca el logo a la derecha */
+}
+
+h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.contact-info {
+    font-size: 0.8em;
+    color: #ccc;
+    margin-top: 5px;
+}
+
+
+
+        gn-items: center;
+        }
+        .contact-info {
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .logo {
+            max-width: 150px;
+            margin-bottom: 10px;
+        }
+        nav {
+            background-color: #007BFF;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            transition: background 0.3s;
+            cursor: pointer;
+        }
+        nav a:hover {
+            background: #0056b3;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .section {
+            padding: 40px 20px;
+            background: white;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            display: none;
+        }
+        .map-image {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+
+/* Estilos para los servicios */
+.service-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+}
+
+.service-content {
+    display: flex;
+    align-items: center;
+}
+
+.service-image {
+    width: 150px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.service-text {
+    flex: 1;
+    text-align: left;
+}
+
+.service-text h3 {
+    font-size: 1.8em;
+    color: #105B63 ;
+    margin-bottom: 10px;
+}
+
+.service-text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+}
+
+        .doctor-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .doctor-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .doctor-info {
+            flex: 1;
+            text-align: left;
+        }
+        .doctor-info h3 {
+            margin: 0;
+        }
+        .doctor-info p {
+            margin: 5px 0;
+        }
+        .doctor-actions a {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 10px 15px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .doctor-actions a:hover {
+            background-color: #128C7E;
+        }
+        .doctor-actions .button {
+            background-color: #28a745;
+        }
+        .doctor-actions .button:hover {
+            background-color: #218838;
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                width: 100%;
+                text-align: center;
+            }
+            .section {
+                padding: 30px 15px;
+            }
+            .doctor-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .doctor-info {
+                text-align: center;
+            }
+        }
+        /* Estilos para la sección "NOSOTROS" */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        .about-content h3 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #0B3C47 ;
+        }
+
+        .about-content h4 {
+            font-size: 1.5em;
+            margin-top: 30px;
+            color: #105B63 ;
+        }
+
+        .about-content p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+/* Estilos para la sección "CONTACTO" */
+#contacto {
+    background-color: white ;
+    color: #333;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#contacto h2 {
+    font-size: 2.5em;
+    color: #0B3C47 ;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Hacer el texto dentro de la sección de contacto de color negro */
+#contacto .contact-info {
+    color: #000; /* Color de texto negro */
+}
+
+#contacto .contact-info p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+#contacto .contact-info ul {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: left;
+    font-size: 1.1em;
+    margin: 10px auto;
+    max-width: 600px;
+}
+
+#contacto .contact-info ul li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+#contacto .contact-buttons {
+    margin-top: 30px;
+}
+
+#contacto .contact-buttons .button {
+    padding: 15px 30px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin: 10px 5px;
+    font-size: 1.1em;
+    transition: background 0.3s;
+    display: inline-block;
+}
+
+#contacto .contact-buttons .button:hover {
+    background-color: #0056b3;
+}
+
+#contacto .contact-buttons .button[style] {
+    background-color: #25D366; /* Color WhatsApp */
+}
+
+#contacto .contact-buttons .button[style]:hover {
+    background-color: #128C7E;
+}
+
+#contacto .map-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#contacto .map-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos adicionales para hacer el texto más llamativo */
+#contacto .contact-info h3 {
+    font-size: 1.8em;
+    color: #105B63 ;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#contacto .contact-info p strong {
+    color: #105B63 ;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    #contacto {
+        padding: 30px 15px;
+    }
+
+    #contacto .contact-info ul {
+        font-size: 1em;
+    }
+
+    #contacto .contact-buttons .button {
+        width: 100%;
+        font-size: 1.1em;
+    }
+}
+
+
+
+
+/* Estilo para el contenedor del menú */
+#navbar {
+    background-color: #105B63 ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+#navbar a:hover {
+    background: #F5F5DC ;
+    color: black;
+}
+
+/* Estilo para el icono de menú */
+#navbar .icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+}
+
+/* Estilo del menú desplegable */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Estilo del menú en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    #navbar .icon {
+        display: block;
+    }
+    .menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+    .menu a {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+/* Estilo cuando el menú está visible */
+.menu.show {
+    display: flex;
+}
+
+/* Estilos para la galería de imágenes en formato mosaico */
+.gallery {
+    margin-top: 40px;
+    display: flex; /* Usamos flexbox para las imágenes en fila */
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten en filas cuando no haya espacio suficiente */
+    gap: 20px; /* Espacio entre las imágenes */
+    justify-content: center; /* Centra las imágenes en la pantalla */
+}
+
+.gallery img {
+    width: 300px; /* El ancho de las imágenes se ajusta */
+    height: 200px; /* Altura fija de las imágenes */
+    object-fit: cover; /* Asegura que las imágenes no se deformen */
+    border-radius: 10px; /* Bordes redondeados para un toque moderno */
+}
+
+
+
+
+/* Estilos para el video de fondo */
+#background-video {
+    position: fixed; /* El video se fijará a la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegura que el video ocupe todo el ancho */
+    height: 100%; /* Asegura que el video ocupe todo el alto */
+    object-fit: cover; /* El video cubrirá todo el área sin distorsionar */
+    z-index: -1; /* Coloca el video por debajo del contenido */
+    pointer-events: none; /* Evita que el video interfiera con la interacción del usuario */
+}
+
+    </style>
+    <script>
+        function mostrarSeccion(id) {
+            var secciones = document.querySelectorAll('.section');
+            secciones.forEach(function(seccion) {
+                seccion.style.display = 'none';
+            });
+            document.getElementById(id).style.display = 'block';
+        }
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("show");
+        }
+
+
+    </script>
+    <video autoplay loop muted id="background-video">
+        <source src="back1.mp4" type="video/mp4">
+        Tu navegador no soporta el video HTML5.
+    </video>
+
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <h1>RIO - Radio Imagen en Ortodoncia</h1>
+        <p class="contact-info">📍 Dirección: Calle Francisco Carvajal, entre calles 10 & 11, zona Villa Dolores, El Alto - 📞 Tel: +591 68268235 - ✉ Email: oficina.comercial.rio@gmail.com</p>
+    </div>
+    <img src="LOGO.png" alt="Logo Consultorio Dental" class="logo">
+</header>
+
+<nav id="navbar">
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+        &#9776; MENU
+    </a>
+    <div id="menu" class="menu">
+        <a onclick="mostrarSeccion('inicio')">Inicio</a>
+        <a onclick="mostrarSeccion('servicios')">Servicios</a>
+        <a onclick="mostrarSeccion('especialistas')">Especialistas</a>
+        <a onclick="mostrarSeccion('nosotros')">Nosotros</a>
+        <a onclick="mostrarSeccion('contacto')">Contacto</a>
+        <a onclick="mostrarSeccion('citas')">Agendar Cita</a>
+        
+    </div>
+</nav>
+
+    <div class="container">
+        <section id="inicio" class="section" style="display: block;">
+            <h2>Bienvenido</h2>
+            <p>Ofrecemos servicios de radiología y tomografía dental con tecnología avanzada.</p>
+        </section>
+
+        <section id="servicios" class="section">
+            <h2>Nuestros Servicios</h2>
+
+            <!-- Servicio 1 -->
+            <div class="service-box">
+                <div class="service-content">
+                    <img src="radiografia.jpeg" alt="Ortodoncia" class="service-image">
+                    <div class="service-text">
+                        <h3>Radiografías dentales</h3>
+                        <p>Las radiografías dentales son un tipo de imagen de los dientes y la boca. Los rayos X son una forma de radiación electromagnética de alta energía y penetran el cuerpo para formar una imagen en una película o en una pantalla. Las radiografías pueden tomarse de manera digital o en una película.</p>
+                        <p>Las estructuras que son densas (como las obturaciones de plata o restauraciones metálicas) bloquearán la mayor parte de la energía lumínica de los rayos X. Esto aparecerá de color blanco en la película revelada. Las estructuras que contienen aire aparecerán de color negro, y los dientes, tejido y líquidos aparecerán como sombras de color gris.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio 2 -->
+            <div class="service-box">
+                <div class="service-content">
+                    <img src="tomografia.jpeg" alt="Radiología" class="service-image">
+                    <div class="service-text">
+                        <h3>Tomografías dentales</h3>
+                        <p>La tomografía computarizada dental de haz en cónico (TC) es un tipo especial de equipo de rayos X que se utiliza cuando los rayos X dentales o faciales regulares no son suficientes. Su médico podría usar esta tecnología para producir imágenes tridimensionales (3D) de sus dientes, su tejidos blandos, y de la trayectoria de los nervios y huesos en una sola exploración.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agregar más servicios aquí... -->
+        </section>
+
+
+        <section id="especialistas" class="section">
+            <h2>Conoce a Nuestros Especialistas</h2>
+            <div class="doctor-card">
+                <img src="Mauricio Cladera.jpg" alt="Dr. Mauricio Cladera">
+                <div class="doctor-info">
+                    <h3>Dr. Mauricio Cladera</h3>
+                    <p><strong>Especialidad:</strong> Dentista General</p>
+                    <p><strong>Contacto:</strong> +591 77710879</p>
+                </div>
+                <div class="doctor-actions">
+                    <a href="https://wa.me/+59177710879" target="_blank">Enviar WhatsApp</a>
+                    <a href="https://www.facebook.com/mauricio.cladera" target="_blank">Facebook</a>
+                    <a href="https://linkedin.com/in/" target="_blank">LinkedIn</a>
+                    <a href="https://rio-booking.youcanbook.me/" target="_blank" class="button">Agendar Cita</a>
+                </div>
+            </div>
+            <!-- Repite el siguiente bloque para cada doctor -->
+
+            <!-- Agrega más doctores aquí -->
+        </section>
+        <section id="nosotros" class="section">
+            <div class="about-content">
+                <h3>Radio Imagen en Ortodoncia "RIO"</h3>
+                <p>La experiencia de odontólogos profesionales les traen el concepto más moderno en atención dental integral. Somos una red privada que brinda servicios radiologicos dentales para toda la familia.</p>
+                <p>Adultos y niños cuentan con ambientes especiales para su espera y su tratamiento. Con tecnología de avanzada, equipos modernos y sofisticados, profesionales altamente calificados, en infraestructuras que lo harán sentir muy cómodo... Visítenos.</p>
+                
+                <h4>MISIÓN</h4>
+                <p>Brindar servicios radiograficos integrales contribuyendo a resolver eficazmente los requerimientos profesionales para el correcto tratamiento de las personas, aplicando para ello conceptos de excelencia en el servicio, eficiencia en la gestión y calidez personalizada en la atención.</p>
+                <h4>VISIÓN</h4>
+                <p>Ser un centro de radiologia dental líder, con lo más avanzado en tecnología y con especialistas que reúnan los requisitos máximos de profesionalismo y excelencia, para satisfacer al máximo las exigencias de las personas e ir más allá de sus expectativas, deseando establecer una relación duradera con cada persona basada en el tratamiento personalizado y orientado al detalle brindándoles nuestra experiencia a su servicio.</p>
+            </div>
+            <div class="gallery">
+                <div class="gallery-container">
+                    <img src="SALA DE ESPERA 1.jpeg" alt="Imagen 1">
+                    <img src="SALA DE ESPERA 2.jpeg" alt="Imagen 2">
+                    <img src="TOMOGRAFO 2.jpeg" alt="Imagen 3">
+                    <img src="TOMOGRAFO 3.jpeg" alt="Imagen 4">
+                    <img src="TOMOGRAFO.jpeg" alt="Imagen 5">
+                </div>
+            </div>
+
+            
+        </section>
+
+<section id="contacto" class="section">
+    <h2>¡Contáctanos!</h2>
+    <div class="contact-info">
+        <p><strong>📍 Dirección:</strong> Calle Francisco Carvajal, entre calles 10 & 11, zona Villa Dolores, El Alto</p>
+        <p><strong>⏰ Horarios de Atención:</strong></p>
+        <ul>
+            <li>Lunes a Sábado: 8:30 a 14:00</li>
+            <li>Consultas por la tarde se realizan bajo cita o coordinación previa.</li>
+            <li>Domingos: Sin atención</li>
+        </ul>
+        
+        <div class="contact-buttons">
+            <a href="https://maps.app.goo.gl/S3DGPF17YfYxSqLV9" target="_blank" class="button">Ver en Google Maps</a>
+            <a href="https://wa.me/+59168268235" target="_blank" class="button" style="background-color: #25D366;">Chat en WhatsApp</a>
+            <a href="https://rio-booking.youcanbook.me/" target="_blank" class="button">Agendar Cita</a>
+        </div>
+    </div>
+    
+    <div class="map-container">
+        <img src="CROQUIS.png" alt="Mapa de Ubicación" class="map-image">
+    </div>
+</section>
+
+<section id="citas" class="section">
+    <h2>¡Agenda tu cita!</h2>
+    <p><strong>⚠️ Instrucciones:</strong> Seleccione la fecha y horario en la que desea reservar su cita.</p>
+    <p>Su comprobante de reserva sera enviada a su correo electronico.</p>
+    <script src="https://embed.ycb.me"  async="true"    data-domain="rio-booking"   data-displaymode="auto"></script>
+</section>
+    </div>
+</body>
+</html>
