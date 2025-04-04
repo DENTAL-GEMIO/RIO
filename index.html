@@ -34,8 +34,10 @@
     }
 
     .logo {
-      max-width: 120px;
+      max-width: 150px;
       height: auto;
+      position: absolute;
+      right: 0px;
     }
 
     h1 {
@@ -197,14 +199,12 @@
     }
 
     .doctor-card img {
-      max-width: 120px;
+      max-width: 50%;
     }
     .doctor-info {
       flex: 1 1 60%;
     }
-.service-box:hover {
-    transform: translateY(-5px);
-}
+
 
 .service-content {
     display: flex;
@@ -212,7 +212,7 @@
 }
 
 .service-image {
-    width: 150px; /* Ajusta el tamaño de la imagen */
+    width: 50%; /* Ajusta el tamaño de la imagen */
     height: auto;
     border-radius: 8px;
     margin-right: 20px; /* Espacio entre la imagen y el texto */
@@ -259,9 +259,11 @@
 
     #navbar .icon {
       display: none;
-      font-size: 28px;
+      font-size: 20px;
       cursor: pointer;
       margin: auto 0;
+      color: black;
+      background-color: #105B63;
     }
 
     #menu {
@@ -361,13 +363,15 @@
   <header>
     <div class="header-content">
       <h1>RIO - Radio Imagen en Ortodoncia</h1>
-      <p class="contact-info">➤ Calle Francisco Carvajal, entre calles 10 & 11, zona Villa Dolores, El Alto - ☏ +591 68268235 - ✉ oficina.comercial.rio@gmail.com</p>
+      <p class="contact-info">➤ Calle Carvajal Nro 80,Villa Dolores, El Alto</p>
+      <p class="contact-info">☏ +591 68268235</p>
+      <p class="contact-info">✉ oficina.comercial.rio@gmail.com</p>
     </div>
     <img src="LOGO.png" alt="Logo" class="logo">
   </header>
 
   <nav id="navbar">
-    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776; MENU</a>
     <div id="menu">
       <a href="#" onclick="mostrarSeccion('inicio')">Inicio</a>
       <a href="#" onclick="mostrarSeccion('servicios')">Servicios</a>
@@ -396,10 +400,11 @@
                     </div>
                 </div>
             </div>
-            <div class="service-box">
+            <div class="service-box" style="display: flex; justify-content: center">
                 <div class="service-content">
                     <img src="tomografia.jpeg" alt="Radiología" class="service-image">
                     <div class="service-text">
+
                         <h3>Tomografías dentales</h3>
                         <p>La tomografía computarizada dental de haz en cónico (TC) es un tipo especial de equipo de rayos X que se utiliza cuando los rayos X dentales o faciales regulares no son suficientes. Su médico podría usar esta tecnología para producir imágenes tridimensionales (3D) de sus dientes, su tejidos blandos, y de la trayectoria de los nervios y huesos en una sola exploración.</p>
                     </div>
